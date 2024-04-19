@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    
     <title>
         RevoU Project Temperature Converter
     </title>
@@ -12,30 +13,32 @@
         <header>
             <h1>Temperature Converter - Yustina Yunita</h1>
         </header>
-        
-        <section class = "section-celcius">
-            <p>Masukkan Suhu Derajat Celcius (&deg; C) </p>
-            <p>Celsius (&deg; C) </p>
-            <textarea></textarea>
+
+        <section class = "main-body">
+            <section class = "section-celcius">
+                <p>Masukkan Suhu Derajat Celcius (&deg; C) ke kotak dibawah, lalu klik tombol Convert untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg; F)</p>
+                <p>Celsius (&deg; C) </p>
+                <textarea id = "celcius"></textarea>
+            </section>
+
+            <div class = "button">
+                <button>Convert</button>
+                <button>Reset</button> 
+                <button>Reverse</button>
+            </div>
+
+            <section class = "section-fahrenheit">
+                <p>Fahrenheit (&deg; F) </p>
+                <textarea id = "result"></textarea>
+            </section>
+
+            <section class = "section-calculate">
+                <p>Calculation Method </p>
+                <textarea id = "method"></textarea>
+            </section>
         </section>
 
-        <div class = "button">
-            <button>Convert</button>
-            <button>Reset</button> 
-            <button>Reverse</button>
-        </div>
-
-        <section class = "section-fahrenheit">
-            <p>Fahrenheit (&deg; F) </p>
-            <textarea></textarea>
-        </section>
-
-        <section class = "section-calculate">
-            <p>Calculation Method </p>
-            <textarea></textarea>
-        </section>
-
-        <section class = "section-calculate">
+        <section class = "section-explanation">
             <header>
                 <h2>Cara Konversi Dari Celsius (&deg; C) ke Fahrenheit (&deg; F)</h2>
             </header>
@@ -46,7 +49,7 @@
                 <p> suhu <span class ="highlight">S</span> dalam derajat fahrenheit (&deg; F) sama dengan suhu <span class ="highlight"> S </span> dalam derajat Celcius (&deg; C) kali <span class ="highlight"> 9/5  </span> tambah <span class ="highlight"> 32  </span></p>
                 <p style="font-weight: bold;">
                     <span class ="highlight">
-                        S <sub> (&deg; F) </sub> =  (S <sub>(&deg;F)</sub> x 9/5) + 32
+                        S <sub> (&deg; F) </sub> =  (S <sub>(&deg;C)</sub> x 9/5) + 32
                     </span>
                 </p>
                 <p> atau</p>
@@ -56,8 +59,8 @@
                     </span>
                 </p>
             </article>
-            <hr>
 
+            <hr>
         </section>
     </body>
 
