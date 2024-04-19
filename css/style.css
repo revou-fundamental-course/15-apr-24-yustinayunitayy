@@ -1,0 +1,46 @@
+header {
+    text-align: center;
+    padding-top: 20px;
+}
+.section-celcius{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+.section-fahrenheit{
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.section-calculate{
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+textarea{
+    width: 25%;
+    height: 100px;
+    resize: none;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.button{
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.highlight{
+    font-size: 20px;
+    font-style: italic;
+}
+
+article{
+    font-size: 18px;
+    text-align: center;
+}
+
+body{
+    padding-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
