@@ -3,66 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
     
     <title>
         RevoU Project Temperature Converter
     </title>
 </head>
     <body>
-        <header>
-            <h1>Temperature Converter - Yustina Yunita</h1>
+        <header class="title">
+            <h1>Temperature Converter</h1>
+            <h4> <em> Mini RevoU Project by Yustina Yunita </em> </h4>
         </header>
-
         <section class = "main-body">
-            <section class = "section-celcius">
-                <p>Masukkan Suhu Derajat Celcius (&deg; C) ke kotak dibawah, lalu klik tombol Convert untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg; F)</p>
-                <p>Celsius (&deg; C) </p>
-                <textarea id = "celcius"></textarea>
+
+            <!-- section introduction untuk memberitahu tata cara menggunakan temperature converter - yustina yunita -->
+            <section class = "section-introduction">
+                <p>Untuk mengkonversi Celsius (&deg; C) ke Fahrenheit (&deg; F), Silahkan input derajat Celcius dalam kolom <strong> dibawah  Celsius (&deg; C) </strong>lalu tekan tombol Convert</p>
+                <p>Untuk mengkonversi Fahrenheit (&deg; F) ke Celsius (&deg; C), Silahkan input derajat Fahrenheit dalam kolom<strong> dibawah Fahrenheit (&deg; F) </strong> lalu tekan tombol Reverse</p>
             </section>
 
-            <div class = "button">
-                <button>Convert</button>
-                <button>Reset</button> 
-                <button>Reverse</button>
+            <!-- form converter -->
+            <form onsubmit="convert(); return false;">
+                <section class = "section-celcius">
+                    <h3>Celsius (&deg; C) </h3>
+                    <input type="text" id="inputCelsius">
+                </section>
+
+                <div class = "button">
+                    <input type="button" value ="Convert" onclick="convert()">
+                    <input type="reset" value="Reset">
+                    <input type="button" value="Reverse" onclick="reverse()">
+                </div>
+                
+                <section class = "section-fahrenheit">
+                    <h3>Fahrenheit (&deg; F) </h3>
+                    <input type="text" id="inputFahrenheit">
+                </section>
+
+                <section class = "section-calculate">
+                    <h3>Calculation Method </h3>
+                    <input type="text" id="method">
+                </section>
+            </form>
+
+            <hr style="border: 2px solid #C5A3E1;">
+
+            <div class="flex-container">
+                
+                <!-- section explanation untuk rumus cara konversi dari celcius ke fahrenheit-->
+                <section class = "section-explanation-celciusfahrenheit">
+                    <header>
+                        <h2>Cara Konversi Dari Celsius (&deg; C) ke Fahrenheit (&deg; F)</h2>
+                    </header>
+                    <article>
+                        <hr>
+                        <p> Suhu <span class ="highlight">S</span> dalam derajat fahrenheit (&deg; F) sama dengan suhu <span class ="highlight"> S </span> dalam derajat Celcius (&deg; C) kali <span class ="highlight"> 9/5  </span> tambah <span class ="highlight"> 32  </span></p>
+                        <p class = "rumus">
+                            <span class ="highlight">
+                                S <sub> (&deg; F) </sub> =  (S <sub>(&deg;C)</sub> x 9/5) + 32
+                            </span>
+                        </p>
+
+                        <p style="text-align: center;">atau</p>
+
+                        <p class = "rumus">
+                            <span class ="highlight">
+                                S <sub> (&deg; F) </sub> =  (S <sub>(&deg;C)</sub> x 1.8) + 32
+                            </span>
+                        </p>
+                    </article>
+                </section>
+
+                <!-- section explanation untuk rumus cara konversi dari fahrenheit ke Celcius -->
+                <section class = "section-explanation-fahrenheitcelcius">
+                    <header>
+                        <h2>Cara Konversi Dari Fahrenheit (&deg; F) ke Celsius (&deg; C) </h2>
+                    </header>
+                    <article>
+                        <hr>
+                        <p> Suhu <span class ="highlight">S</span> dalam derajat Celsius(&deg; C) sama dengan suhu <span class ="highlight"> S </span> dalam derajat Fahrenheit (&deg; F) kurang <span class ="highlight"> 32 </span> kali <span class ="highlight"> 5/9  </span></p>
+                        <p class = "rumus">
+                            <span class ="highlight">
+                                S <sub> (&deg; C) </sub> =  (S <sub>(&deg;F)</sub> - 32) x 5/9
+                            </span>
+                        </p>
+                    </article>
+                </section>
             </div>
-
-            <section class = "section-fahrenheit">
-                <p>Fahrenheit (&deg; F) </p>
-                <textarea id = "result"></textarea>
-            </section>
-
-            <section class = "section-calculate">
-                <p>Calculation Method </p>
-                <textarea id = "method"></textarea>
-            </section>
-        </section>
-
-        <section class = "section-explanation">
-            <header>
-                <h2>Cara Konversi Dari Celsius (&deg; C) ke Fahrenheit (&deg; F)</h2>
-            </header>
-
-            <hr>
-
-            <article>
-                <p> suhu <span class ="highlight">S</span> dalam derajat fahrenheit (&deg; F) sama dengan suhu <span class ="highlight"> S </span> dalam derajat Celcius (&deg; C) kali <span class ="highlight"> 9/5  </span> tambah <span class ="highlight"> 32  </span></p>
-                <p style="font-weight: bold;">
-                    <span class ="highlight">
-                        S <sub> (&deg; F) </sub> =  (S <sub>(&deg;C)</sub> x 9/5) + 32
-                    </span>
-                </p>
-                <p> atau</p>
-                <p style="font-weight: bold;">
-                    <span class ="highlight">
-                        S <sub> (&deg; F) </sub> =  (S <sub>(&deg;C)</sub> x 1.8) + 32
-                    </span>
-                </p>
-            </article>
-
-            <hr>
+            <hr style="border: 2px solid #C5A3E1;">
         </section>
     </body>
-
 </html>
     
